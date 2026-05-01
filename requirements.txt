@@ -1,0 +1,7 @@
+pyautogui
+opencv-python
+Pillow
+numpy
+pywin32
+rich
+questionary

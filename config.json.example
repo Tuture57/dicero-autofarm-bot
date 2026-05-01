@@ -1,0 +1,18 @@
+{
+    "mirrorto_title": "MirrorTo",
+    "templates_dir": "templates",
+    "game_left_offset": 80,
+    "game_top_offset": 79,
+    "game_right_offset": 19,
+    "game_bottom_offset": 80,
+    "confidence": 0.75,
+    "loop_delay": 0.5,
+    "click_delay": 0.3,
+    "wheel_wait": 3.0,
+    "card_positions": [
+        [205, 290],
+        [206, 380],
+        [207, 474]
+    ],
+    "dice_position": [72, 594]
+}
