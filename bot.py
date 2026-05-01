@@ -49,7 +49,7 @@ def _listen_escape():
         if msvcrt.kbhit():
             ch = msvcrt.getch()
             if ch == b'\x1b':
-                log.info("Echap détecté — arrêt en cours...")
+                log.info("Echap détecté, arrêt en cours...")
                 _stop_event.set()
                 return
         time.sleep(0.05)
@@ -92,7 +92,7 @@ def screenshot_window(hwnd):
     bmp.CreateCompatibleBitmap(mfc_dc, w, h)
     save_dc.SelectObject(bmp)
 
-    # PW_RENDERFULLCONTENT = 2 — rend la fenêtre même cachée/derrière
+    # PW_RENDERFULLCONTENT = 2, rend la fenêtre même cachée/derrière
     ctypes.windll.user32.PrintWindow(hwnd, save_dc.GetSafeHdc(), 2)
 
     bmp_info = bmp.GetInfo()
@@ -241,7 +241,7 @@ def handle_wheel(hwnd, screen, templates):
 def handle_select_skill(hwnd, screen, templates):
     positions = cfg.get("card_positions")
     if not positions:
-        log.error("Positions des cartes non calibrées — lance 'Calibrer les templates' depuis le menu.")
+        log.error("Positions des cartes non calibrées. Lance 'Calibrer les templates' depuis le menu.")
         return False
     chosen = random.choice(positions)
     log.debug(f"Selecting skill card at {chosen}")
@@ -252,7 +252,7 @@ def handle_select_skill(hwnd, screen, templates):
 def handle_select_dice(hwnd, screen, templates):
     pos = cfg.get("dice_position")
     if not pos:
-        log.error("Position du dé non calibrée — lance 'Calibrer les templates' depuis le menu.")
+        log.error("Position du dé non calibrée. Lance 'Calibrer les templates' depuis le menu.")
         return False
     log.debug(f"Selecting die at {pos}")
     click_in_window(hwnd, pos[0], pos[1])
@@ -327,7 +327,7 @@ def main():
     ctypes.windll.user32.ShowWindow(hwnd, 9)
     ctypes.windll.user32.SetForegroundWindow(hwnd)
     time.sleep(0.3)
-    log.info("Bot démarré — appuie sur Echap pour arrêter.")
+    log.info("Bot démarré, appuie sur Echap pour arrêter.")
 
     templates_to_load = [
         "menu_new_game",
@@ -348,7 +348,7 @@ def main():
         t = load_template(f"{name}.png")
         templates[name] = t
         if t is None:
-            log.warning(f"Template manquant : {name}.png — recalibre les templates depuis le menu.")
+            log.warning(f"Template manquant : {name}.png, recalibre les templates depuis le menu.")
 
     log.info(f"Templates chargés : {sum(1 for v in templates.values() if v is not None)}/{len(templates_to_load)}")
 
@@ -362,7 +362,7 @@ def main():
         try:
             hwnd = find_mirrorto_window()
             if not hwnd:
-                log.warning("Fenêtre MirrorTo perdue — nouvelle tentative...")
+                log.warning("Fenêtre MirrorTo perdue., nouvelle tentative...")
                 time.sleep(2)
                 continue
 
@@ -370,11 +370,11 @@ def main():
             cur_w = cur_rect[2] - cur_rect[0]
             cur_h = cur_rect[3] - cur_rect[1]
             if cur_w != ref_w or cur_h != ref_h:
-                log.warning(f"Taille de fenêtre changée ({cur_w}x{cur_h} au lieu de {ref_w}x{ref_h}) — les templates peuvent ne plus fonctionner.")
+                log.warning(f"Taille de fenêtre changée ({cur_w}x{cur_h} au lieu de {ref_w}x{ref_h}). Les templates peuvent ne plus fonctionner.")
 
             screen, _ = screenshot_window(hwnd)
             if screen is None:
-                log.warning("Fenêtre trop petite ou minimisée — en attente...")
+                log.warning("Fenêtre trop petite ou minimisée., en attente...")
                 time.sleep(1)
                 continue
             state = detect_state(screen, templates)
@@ -382,7 +382,7 @@ def main():
             if state == "unknown":
                 consecutive_unknown += 1
                 if consecutive_unknown % 10 == 0:
-                    log.warning(f"État inconnu depuis {consecutive_unknown} cycles — vérification en cours...")
+                    log.warning(f"État inconnu depuis {consecutive_unknown} cycles., vérification en cours...")
                 time.sleep(LOOP_DELAY)
                 continue
 
