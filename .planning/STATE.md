@@ -5,14 +5,14 @@
 See: .planning/PROJECT.md (updated 2026-05-01)
 
 **Core value:** Le bot joue une partie complète sans jamais se bloquer — du menu jusqu'aux récompenses — en gérant tous les états du jeu.
-**Current focus:** Milestone v1.1 — Publication GitHub
+**Current focus:** Milestone v1.1 — SHIPPED 2026-05-01
 
 ## Current Position
 
-Phase: 6 — Nettoyage et publication
-Plan: 06-01, 06-02
-Status: Ready to execute
-Last activity: 2026-05-01 — Phase 6 planned (2 plans, 2 waves)
+Phase: — (milestone v1.1 complete)
+Plan: —
+Status: Complete
+Last activity: 2026-05-01 — Phase 6 complete, milestone v1.1 shipped
 
 ## Phase History
 
@@ -21,6 +21,7 @@ Last activity: 2026-05-01 — Phase 6 planned (2 plans, 2 waves)
 - Phase 3 — Menu principal main.py rich: Complete (2026-05-01)
 - Phase 4 — Messages user-friendly: Complete (2026-05-01)
 - Phase 5 — README: Complete (2026-05-01)
+- Phase 6 — Nettoyage et publication: Complete (2026-05-01)
 
 ## Blockers
 
@@ -28,4 +29,4 @@ Last activity: 2026-05-01 — Phase 6 planned (2 plans, 2 waves)
 
 ---
 *Initialized: 2026-04-30*
-*Last updated: 2026-05-01 — Phase 5 complete, advancing to Phase 6*
+*Last updated: 2026-05-01 — Phase 6 complete, milestone v1.1 shipped*

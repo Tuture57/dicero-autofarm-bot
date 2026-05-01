@@ -3,7 +3,7 @@
 ## Milestones
 
 - ✅ **v1.0 MVP** — Phases 1-2 (shipped 2026-04-30)
-- 🔄 **v1.1 Publication GitHub** — Phases 3-6 (in progress)
+- ✅ **v1.1 Publication GitHub** — Phases 3-6 (shipped 2026-05-01)
 
 ## Phases
 
@@ -20,7 +20,7 @@
 - [x] Phase 3: Menu principal `main.py` avec rich (2/2 plans) — completed 2026-05-01
 - [x] Phase 4: Messages user-friendly dans bot.py et capture_templates.py (2/2 plans) — completed 2026-05-01
 - [x] Phase 5: README — guide d'installation et d'utilisation (1/1 plans) — completed 2026-05-01
-- [ ] Phase 6: Nettoyage repo + historique Git vierge signé Tuture
+- [x] Phase 6: Nettoyage repo + historique Git vierge signé Tuture (2/2 plans) — completed 2026-05-01
 
 **Phase 3: Menu principal `main.py` avec rich**
 Goal: Créer le point d'entrée unique avec menu stylisé
@@ -64,7 +64,7 @@ Success criteria:
 | 3. Menu main.py rich | v1.1 | 2/2 | Complete | 2026-05-01 |
 | 4. Messages user-friendly | v1.1 | 2/2 | Complete | 2026-05-01 |
 | 5. README | v1.1 | 1/1 | Complete | 2026-05-01 |
-| 6. Nettoyage + publication | v1.1 | 0/? | Pending | — |
+| 6. Nettoyage + publication | v1.1 | 2/2 | Complete | 2026-05-01 |
 
 ---
 *See .planning/milestones/v1.0-ROADMAP.md for full archive*
